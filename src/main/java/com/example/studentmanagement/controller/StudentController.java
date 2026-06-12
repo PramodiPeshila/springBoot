@@ -41,7 +41,7 @@ public class StudentController {
         if (updatedStudent != null) {
             return ResponseEntity.ok(new ApiResponse("Student name updated successfully", true));
         }
-        return ResponseEntity.status(404).body(new ApiResponse("Student not found", false));
+        return ResponseEntt.status(404).body(new ApiResponse("Student not found", false));
     }
 }
 
