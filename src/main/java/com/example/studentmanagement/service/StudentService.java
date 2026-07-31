@@ -24,9 +24,9 @@ public class StudentService {
 		return repository.findAll();
 	}
 
-//	public Optional<StudentEntity> getStudentById(Long id) {
-//		return repository.findById(id);
-//	}
+	public Optional<StudentEntity> getStudentById(Long id) {
+		return repository.findById(id);
+	}
 
 	public StudentEntity updateStudentName(Long id, String name) {
 		Optional<StudentEntity> student = repository.findById(id);
@@ -36,6 +36,10 @@ public class StudentService {
 			return repository.save(existingStudent);
 		}
 		return null;
+	}
+
+	public void deleteStudent(Long id){
+		repository.deleteById(id);
 	}
 
 
